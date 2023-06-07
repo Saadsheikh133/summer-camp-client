@@ -1,23 +1,42 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useForm } from 'react-hook-form';
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
+import Swal from "sweetalert2";
 
 
 const Register = () => {
-    const { registerUser } = useContext(AuthContext);
-    const { register, handleSubmit, formState: { errors }, reset  } = useForm();
+    const [error, setError] = useState('');
+    const { registerUser, updateUserProfile, logOut } = useContext(AuthContext);
+    const { register, handleSubmit, formState: { errors }, reset } = useForm();
+    const navigate = useNavigate();
+
     const onSubmit = data => {
+        setError('');
         console.log(data)
-        registerUser( data.email,data.password)
+        registerUser(data.email, data.password)
             .then(result => {
                 const loggedUser = result.user;
-                console.log(loggedUser)
+                console.log(loggedUser);
+                Swal.fire({
+                    position: 'top',
+                    icon: 'success',
+                    title: 'User has been created successfully',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+                updateUserProfile(data.name, data.image)
+                    .then(() => { })
+                    .catch()
+                logOut()
+                    .then()
+                    .catch()
+                navigate('/login')
                 reset();
             })
-        .catch(error => console.log(error.message))
+            .catch(error => setError(error.message))
 
-        
+
     };
     console.log(errors);
     return (
@@ -71,6 +90,7 @@ const Register = () => {
                             <div className="form-control mt-6">
                                 <input className="btn btn-primary" type="submit" value="Register" />
                             </div>
+                            <p className="text-red-600 my-4">{error}</p>
                         </div>
                     </form>
                 </div>

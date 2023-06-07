@@ -24,7 +24,7 @@ const AuthProvider = ({ children }) => {
     }
 
     /* signIn user with email and password */
-    const login = (email, password) => {
+    const loginUser = (email, password) => {
         setLoading(true);
         return signInWithEmailAndPassword(auth, email, password)
     }
@@ -57,7 +57,7 @@ const AuthProvider = ({ children }) => {
         user,
         loading,
         registerUser,
-        login,
+        loginUser,
         googleLogin,
         updateUserProfile,
         logOut

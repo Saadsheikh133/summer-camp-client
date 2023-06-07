@@ -4,6 +4,7 @@ import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import Swal from "sweetalert2";
+import authentication from '../../assets/images/authentication.gif'
 
 const Login = () => {
     const { loginUser } = useContext(AuthContext);
@@ -35,7 +36,7 @@ const Login = () => {
             <div className="hero min-h-screen ">
                 <div className="hero-content flex-col lg:flex-row-reverse w-full">
                     <div className="text-center lg:text-left lg:w-1/2">
-                        <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                        <img className="rounded-xl lg:ml-10" src={authentication} alt="" />
                     </div>
                     <form onSubmit={handleSubmit(onSubmit)} className="card flex-shrink-0 w-full max-w-md shadow-2xl bg-base-100 ">
                         <div className="card-body">

@@ -17,7 +17,8 @@ const AuthProvider = ({ children }) => {
     }
 
     /* create user */
-    const register = (email, password) => {
+    const registerUser = (email, password) => {
+        console.log(email, password)
         setLoading(true);
         return createUserWithEmailAndPassword(auth, email, password)
     }
@@ -55,7 +56,7 @@ const AuthProvider = ({ children }) => {
     const authInfo = {
         user,
         loading,
-        register,
+        registerUser,
         login,
         googleLogin,
         updateUserProfile,

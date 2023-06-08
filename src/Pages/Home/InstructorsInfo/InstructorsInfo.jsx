@@ -6,7 +6,6 @@ import useSports from "../../../Hooks/useSports";
 
 const InstructorsInfo = () => {
     const [, instructors] = useSports();
-    console.log(instructors)
 
     return (
         <>
@@ -14,12 +13,12 @@ const InstructorsInfo = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {
                     instructors?.map(instructor => <div key={instructor._id} className="card w-96 bg-base-100 shadow-xl container mx-auto">
-                        <figure><img src={instructor.Image} alt="Shoes" /></figure>
+                        <figure><img src={instructor.image} alt="Shoes" /></figure>
                         <div className="card-body text-center">
-                            <h2 className="card-title justify-center">{instructor.Name}</h2>
-                            <p>{instructor.Email}</p>
+                            <h2 className="card-title justify-center">{instructor.name}</h2>
+                            <p>{instructor.email}</p>
                             <div className="card-actions justify-center">
-                                <button className="btn btn-primary">Buy Now</button>
+                                <button className="btn btn-primary">See Classes</button>
                             </div>
                         </div>
                     </div>)

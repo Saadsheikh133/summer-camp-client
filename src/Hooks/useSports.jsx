@@ -6,7 +6,7 @@ const useSports = () => {
     const [loader, setLoader] = useState(true);
 
     useEffect(() => {
-        fetch("sports.json")
+        fetch("http://localhost:5000/classes")
             .then(res => res.json())
             .then(data => {
                 setSports(data);

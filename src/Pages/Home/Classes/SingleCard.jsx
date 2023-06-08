@@ -1,6 +1,6 @@
 
 
-const SingleCard = (singleClass) => {
+const SingleCard = ({singleClass}) => {
     const { name, image, price } = singleClass;
     return (
         <div>

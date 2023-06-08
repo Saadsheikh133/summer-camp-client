@@ -1,10 +1,8 @@
 import useSports from "../../../Hooks/useSports";
-// import SingleCard from "./SingleCard";
 
 
 const Classes = () => {
     const [classes] = useSports();
-    console.log(classes)
     return (
         <div>
             <h2 className="text-center text-5xl my-10">Popular Classes</h2>

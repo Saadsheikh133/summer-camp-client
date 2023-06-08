@@ -16,7 +16,7 @@ const Navbar = () => {
         <li><Link to="/">Home</Link></li>
         <li><Link to="/instructor">Instructors</Link></li>
         <li><Link to ="/classes">Classes</Link></li>
-        <li><a>Dashboard </a></li>
+        <li><Link to="/dashboard">Dashboard </Link></li>
     </>
     return (
         <div className="navbar bg-black text-white fixed z-10 container mx-auto bg-opacity-40">

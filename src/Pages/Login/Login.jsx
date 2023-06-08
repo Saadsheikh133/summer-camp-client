@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
@@ -11,6 +11,10 @@ const Login = () => {
     const [error, setError] = useState('');
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
     const [show, setShow] = useState(false);
+    const location = useLocation();
+    const navigate = useNavigate();
+    const from = location.state?.from?.pathname || "/";
+
     const onSubmit = data => {
         setError('');
         console.log(data)
@@ -25,6 +29,7 @@ const Login = () => {
                     showConfirmButton: false,
                     timer: 1500
                 })
+                navigate(from, { replace: true });
                 reset();
             })
         .catch(error => setError(error.message))

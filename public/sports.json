@@ -1,6 +1,5 @@
 [
     {
-        "_id": "1",
         "name": "Beginner Soccer Training",
         "details": "Introduction to soccer basics for beginners.",
         "image": "https://media.istockphoto.com/id/1397817779/photo/goal-soccer-ball-hitting-the-goal-net-after-scoring.webp?b=1&s=170667a&w=0&k=20&c=LGXM4b_OK1L95zWPngDYE6aw4BT0sTl6H7Youy4wWJA=",
@@ -10,7 +9,6 @@
         "price": 50
     },
     {
-        "_id": "2",
         "name": "Advanced Soccer Skills",
         "details": "Improve your soccer skills and techniques.",
         "image": "https://media.istockphoto.com/id/1364255407/photo/soccer-player-making-sliding-tackle.webp?b=1&s=170667a&w=0&k=20&c=5hm_GDZTH_Oro15a8DZfUSkqmFfsjw-dm1dLB4fL9iU=",
@@ -20,7 +18,6 @@
         "price": 70
     },
     {
-        "_id": "3",
         "name": "Soccer Goalkeeper Training",
         "details": "Specialized training for soccer goalkeepers.",
         "image": "https://media.istockphoto.com/id/1440483244/photo/soccer-stadium-ball-center-midfield.webp?b=1&s=170667a&w=0&k=20&c=4xeR8a5dZ_3KpADX0IHGaw8G_nNNiKOP1UFQOuMHBw4=",
@@ -30,7 +27,6 @@
         "price": 60
     },
     {
-        "_id": "4",
         "name": "Soccer Tactics and Strategy",
         "details": "Learn advanced tactics and strategies for soccer.",
         "image": "https://media.istockphoto.com/id/1360033206/photo/members-of-female-kids-soccer-and-football-team-training-and-dribbling-to-improve-their-skills.webp?b=1&s=170667a&w=0&k=20&c=HPx3mMv2FIQl5FaIIYRWZGHVb9oG4CT-XhtjR-WoG48=",
@@ -40,7 +36,6 @@
         "price": 80
     },
     {
-        "_id": "5",
         "name": "Youth Soccer Development",
         "details": "Training program for young soccer players.",
         "image": "https://media.istockphoto.com/id/1347044133/photo/confident-female-soccer-player-practicing-skills-at-court.webp?b=1&s=170667a&w=0&k=20&c=YRdCI457Dt6rVGQm0vySxin81VAZYXQQ_5SQs0vcN-U=",
@@ -50,7 +45,6 @@
         "price": 55
     },
     {
-        "_id": "6",
         "name": "Soccer Fitness and Conditioning",
         "details": "Improve your fitness and conditioning for soccer.",
         "image": "https://media.istockphoto.com/id/1397939213/photo/soccer-coach-talking-to-his-team-about-the-lineup-for-the-game.webp?b=1&s=170667a&w=0&k=20&c=B-MbCeqd20h2behMceb8JJWGrqdc1xnEWqTPNvoIhPo=",
@@ -60,7 +54,6 @@
         "price": 65
     },
     {
-        "_id": "7",
         "name": "Basketball Fundamentals",
         "details": "Learn the basic skills and techniques of basketball.",
         "image": "https://media.istockphoto.com/id/1410259276/photo/friends-playing-basketball-outdoors.webp?b=1&s=170667a&w=0&k=20&c=UZkN3eg5eOn93GkUMLQE_Zxfxx-pAl9Px1pJx8uD14s=",
@@ -70,7 +63,6 @@
         "price": 50
     },
     {
-        "_id": "8",
         "name": "Shooting and Scoring Techniques",
         "details": "Improve your shooting and scoring abilities in basketball.",
         "image": "https://media.istockphoto.com/id/1448879228/photo/people-playing-basketball.webp?b=1&s=170667a&w=0&k=20&c=Aynz9MErfgwlk6iP7cC2QEOQLxeXNKg2sTuHuMh8Gc8=",
@@ -80,7 +72,6 @@
         "price": 60
     },
     {
-        "_id": "9",
         "name": "Basketball Defensive Strategies",
         "details": "Learn effective defensive strategies for basketball.",
         "image": "https://media.istockphoto.com/id/1256247098/photo/basketball-on-court.webp?b=1&s=170667a&w=0&k=20&c=LdicgXR9Vt-wCS2irbZx3FjefObYT2sJzW-LzuQwjlo=",
@@ -90,7 +81,6 @@
         "price": 55
     },
     {
-        "_id": "10",
         "name": "Basketball Team Play",
         "details": "Improve team play, communication, and synergy in basketball.",
         "image": "https://media.istockphoto.com/id/1408137519/photo/realistic-basketball.webp?b=1&s=170667a&w=0&k=20&c=Am-a8KKY9NDf_Iuus0XAZxus1-bf_7HRgUFtHmkcoOc=",
@@ -100,7 +90,6 @@
         "price": 70
     },
     {
-        "_id": "11",
         "name": "Youth Basketball Training",
         "details": "Training program specifically designed for young basketball players.",
         "image": "https://media.istockphoto.com/id/1408109500/photo/basketball-ball-scoring-the-winning-points-on-basketball-net-hoop-on-basketball-arena.webp?b=1&s=170667a&w=0&k=20&c=9xyiG0mb1FOSOkc6H96mhy9D37Ie9DR47g1uNDcsQag=",
@@ -110,7 +99,6 @@
         "price": 65
     },
     {
-        "_id": "12",
         "name": "Basketball Conditioning and Fitness",
         "details": "Improve your fitness and conditioning for basketball.",
         "image": "https://media.istockphoto.com/id/1403620072/photo/basketball-hoop-and-ball-in-the-basketball-court.webp?b=1&s=170667a&w=0&k=20&c=AgrvC0QssklA40B3y_1rcBUhTWhsE3rF1oW3cyX6PVQ=",
@@ -120,7 +108,6 @@
         "price": 75
     },
     {
-        "_id": "13",
         "name": "Tennis Basics for Beginners",
         "details": "Introduction to tennis fundamentals for beginners.",
         "image": "https://media.istockphoto.com/id/917865742/photo/tennis-game-at-night.webp?b=1&s=170667a&w=0&k=20&c=UKM6lxYqmEjcKaG3SZf9uD1kfb6rl86Z_ONxUsqHIKw=",
@@ -130,7 +117,6 @@
         "price": 45
     },
     {
-        "_id": "14",
         "name": "Advanced Tennis Techniques",
         "details": "Improve your tennis skills and techniques.",
         "image": "https://media.istockphoto.com/id/1398694969/photo/african-american-man-playing-tennis.webp?b=1&s=170667a&w=0&k=20&c=uaXDcoFt4ZdgowKJWF_I4rLMoQ9J_YAfjbh-IBHLkTw=",
@@ -140,7 +126,6 @@
         "price": 65
     },
     {
-        "_id": "15",
         "name": "Tennis Serve Mastery",
         "details": "Specialized training to improve your tennis serve.",
         "image": "https://media.istockphoto.com/id/513920615/photo/tennis-ball-on-a-tennis-court.webp?b=1&s=170667a&w=0&k=20&c=2Wugh8BEu3gJ43McfXbO266jydpP8oBHevzg4H6nYjc=",
@@ -150,7 +135,6 @@
         "price": 55
     },
     {
-        "_id": "16",
         "name": "Tennis Strategy and Tactics",
         "details": "Learn advanced strategies and tactics for tennis.",
         "image": "https://media.istockphoto.com/id/475782362/photo/tennis-player.webp?b=1&s=170667a&w=0&k=20&c=QKt63OU3VvosU4m6EwOrsykJ2CBHf63HdAUSjrQ9sLU=",
@@ -160,7 +144,6 @@
         "price": 75
     },
     {
-        "_id": "17",
         "name": "Youth Tennis Development",
         "details": "Training program for young tennis players.",
         "image": "https://media.istockphoto.com/id/471621500/photo/tennis-court-with-tennis-ball-close-up.webp?b=1&s=170667a&w=0&k=20&c=BSCRMwCyA9ZNYEeper_2PN4jgB0c-c-MGMmynm9DVBQ=",
@@ -170,7 +153,6 @@
         "price": 60
     },
     {
-        "_id": "18",
         "name": "Tennis Fitness and Conditioning",
         "details": "Improve your fitness and conditioning for tennis.",
         "image": "https://media.istockphoto.com/id/1388729026/photo/drone-point-of-view-asian-tennis-player-serving-the-ball-with-shadow-directly-above.webp?b=1&s=170667a&w=0&k=20&c=Til0PZesfEQZnS6cyZwe_ZZuXBLgPBt-wsc9fq8ygv0=",
@@ -180,7 +162,6 @@
         "price": 70
     },
     {
-        "_id": "19",
         "name": "Swimming Basics for Beginners",
         "details": "Introduction to swimming fundamentals for beginners.",
         "image": "https://media.istockphoto.com/id/172339615/photo/swimmer.webp?b=1&s=170667a&w=0&k=20&c=Ow1BCzji5CCMupLE_JU7wwZdvoD08CEtOrGLoPHTgTs=",
@@ -190,7 +171,6 @@
         "price": 40
     },
     {
-        "_id": "20",
         "name": "Freestyle Stroke Technique",
         "details": "Improve your freestyle stroke and efficiency in swimming.",
         "image": "https://media.istockphoto.com/id/459214425/photo/perfect-butterfly-stroke.webp?b=1&s=170667a&w=0&k=20&c=vmXLpzeTTX74WUxshj05Zo61HmwMoVAVzgZlwJ7LVhk=",
@@ -200,7 +180,6 @@
         "price": 55
     },
     {
-        "_id": "21",
         "name": "Backstroke Technique and Drills",
         "details": "Master the backstroke technique and practice drills.",
         "image": "https://media.istockphoto.com/id/517381843/photo/woman-swimming-freestyle.webp?b=1&s=170667a&w=0&k=20&c=ZffxmOTIHttCTT_ALjGPDmouH7n8iQveymWJ7z7P100=",
@@ -210,7 +189,6 @@
         "price": 50
     },
     {
-        "_id": "22",
         "name": "Swimming Endurance Training",
         "details": "Build endurance and stamina in swimming.",
         "image": "https://media.istockphoto.com/id/1332857654/photo/aerial-top-view-male-swimmer-swimming-in-swimming-pool-professional-determined-athlete.webp?b=1&s=170667a&w=0&k=20&c=JQ48D9dgwHAXaKeXBuARMZzBFDdrvooQRbbovCJUYt0=",
@@ -220,7 +198,6 @@
         "price": 70
     },
     {
-        "_id": "23",
         "name": "Youth Swimming Lessons",
         "details": "Swimming lessons tailored for young swimmers.",
         "image": "https://media.istockphoto.com/id/177281231/photo/five-swimmers-jumping-together-into-water-underwater-view.webp?b=1&s=170667a&w=0&k=20&c=fJNogwR2D43hIhIqv-OKlmZYE_fxkbeskGEZKFmjqBQ=",
@@ -230,7 +207,6 @@
         "price": 45
     },
     {
-        "_id": "24",
         "name": "Swimming for Fitness",
         "details": "Utilize swimming for overall fitness and wellness.",
         "image": "https://media.istockphoto.com/id/140469717/photo/competitive-swimming.webp?b=1&s=170667a&w=0&k=20&c=RWV_TpkMETRSKGofqKOBv_XuShKnaZ-8PAdy1Uh3eM8=",
@@ -240,7 +216,6 @@
         "price": 60
     },
     {
-        "_id": "43",
         "name": "Introduction to Cycling",
         "details": "Basic cycling techniques and safety guidelines for beginners.",
         "image": "https://media.istockphoto.com/id/172167937/photo/breaking-away.webp?b=1&s=170667a&w=0&k=20&c=mEjxetracvffULFXthnueRwdiim1bl3D1DoB2hTNkyw=",
@@ -250,7 +225,6 @@
         "price": 40
     },
     {
-        "_id": "44",
         "name": "Mountain Biking Skills",
         "details": "Develop off-road mountain biking skills and techniques.",
         "image": "https://media.istockphoto.com/id/470167712/photo/hes-enjoying-the-ride.webp?b=1&s=170667a&w=0&k=20&c=2WadzecshmmYn1Ux-qULmb5oQEmaVh9rhEzfioYuFVU=",
@@ -260,7 +234,6 @@
         "price": 55
     },
     {
-        "_id": "45",
         "name": "Road Cycling Endurance",
         "details": "Build endurance and improve performance in road cycling.",
         "image": "https://media.istockphoto.com/id/1135508703/photo/cycling-race.webp?b=1&s=170667a&w=0&k=20&c=2QmoGiEs4aCHvUgtfRpHFW2ea0VSo3BY6D3FgDM6kzg=",
@@ -270,7 +243,6 @@
         "price": 50
     },
     {
-        "_id": "46",
         "name": "Cycling Maintenance and Repair",
         "details": "Learn basic maintenance and repair skills for bicycles.",
         "image": "https://media.istockphoto.com/id/1310019018/photo/group-of-asian-cyclists-they-cycle-through-rural-and-forest-roads.webp?b=1&s=170667a&w=0&k=20&c=NwDW4yZXGSCa8bKWDnn2wPKL1PkOWgsOhAirKGEOsXo=",
@@ -280,7 +252,6 @@
         "price": 65
     },
     {
-        "_id": "47",
         "name": "Indoor Cycling Classes",
         "details": "High-intensity indoor cycling classes for cardio and fitness.",
         "image": "https://media.istockphoto.com/id/1176169958/photo/group-of-cyclist-at-professional-race.webp?b=1&s=170667a&w=0&k=20&c=dNdVN97RdAT5YaSP5gzsujl0I8xj6SeqooX--6TiDDM=",
@@ -290,7 +261,6 @@
         "price": 45
     },
     {
-        "_id": "48",
         "name": "Cycling for Weight Loss",
         "details": "Effective cycling workouts for weight loss and calorie burning.",
         "image": "https://media.istockphoto.com/id/497894977/photo/cyclist-sprinting.webp?b=1&s=170667a&w=0&k=20&c=TAa6w_hYblvlSjnZgnTFvK1BJRSY-IJxYcHMzP0d_JU=",
@@ -300,7 +270,6 @@
         "price": 60
     },
     {
-        "_id": "65",
         "name": "Golf Basics for Beginners",
         "details": "Introduction to golf swing, stance, and etiquette.",
         "image": "https://media.istockphoto.com/id/1264527463/photo/crop-shot-of-asian-chinese-young-male-golfer-tapping-the-golf-ball-into-a-hole-at-golf-course.webp?b=1&s=170667a&w=0&k=20&c=Y_bfNx6CjKlzq-M4r9mTsW1ITq-tyV-StdqrXu0Lr1o=",
@@ -310,7 +279,6 @@
         "price": 60
     },
     {
-        "_id": "66",
         "name": "Advanced Golf Techniques",
         "details": "Master advanced golf skills, including shot shaping and course management.",
         "image": "https://media.istockphoto.com/id/1318713736/photo/golf-player-making-a-successful-stroke-links-golf.webp?b=1&s=170667a&w=0&k=20&c=N5bAQLZLda0G64IAQKD2pntnPMHMfCxc8JVsXW38NBg=",
@@ -320,7 +288,6 @@
         "price": 80
     },
     {
-        "_id": "67",
         "name": "Golf Short Game Mastery",
         "details": "Focus on putting, chipping, and pitching in golf.",
         "image": "https://media.istockphoto.com/id/1097225062/photo/close-up-golf-ball-on-green-grass.webp?b=1&s=170667a&w=0&k=20&c=8mPXmEkv2sScKjcRVkK6kqF-QGbWjca26kfg5ANMxJM=",
@@ -330,7 +297,6 @@
         "price": 70
     },
     {
-        "_id": "68",
         "name": "Golf Fitness and Conditioning",
         "details": "Improve golf-specific fitness and flexibility for better performance.",
         "image": "https://media.istockphoto.com/id/465611306/photo/golf-ball-near-hole.webp?b=1&s=170667a&w=0&k=20&c=DOOVVTD_JlYwsICLQ4KgbvCiktoomF15u3QVEZfJa_k=",
@@ -340,7 +306,6 @@
         "price": 75
     },
     {
-        "_id": "69",
         "name": "Badminton Beginner Lessons",
         "details": "Introduction to badminton strokes, footwork, and rules.",
         "image": "https://media.istockphoto.com/id/541848148/photo/badminton-player.webp?b=1&s=170667a&w=0&k=20&c=ix-BWYT7fH-R2AS52HI6zc-e--qGo04Yu3Xa4bXUg6I=",
@@ -350,7 +315,6 @@
         "price": 40
     },
     {
-        "_id": "70",
         "name": "Advanced Badminton Skills",
         "details": "Master advanced badminton techniques, such as smashes and drop shots.",
         "image": "https://media.istockphoto.com/id/654106838/photo/man-playing-badminton.webp?b=1&s=170667a&w=0&k=20&c=RMopPVQ_hEElL5W9wQ4ah4idRrvqTWrBddRc5hZiMSY=",
@@ -360,7 +324,6 @@
         "price": 55
     },
     {
-        "_id": "71",
         "name": "Doubles Tactics in Badminton",
         "details": "Learn doubles-specific tactics and strategies in badminton.",
         "image": "https://media.istockphoto.com/id/1094296236/photo/asian-badminton-player-is-hitting-in-court.webp?b=1&s=170667a&w=0&k=20&c=tDwVNy4L3Bl7hTwlrayL4oMu9KndmepYortS3l5qtCE=",
@@ -370,7 +333,6 @@
         "price": 50
     },
     {
-        "_id": "72",
         "name": "Badminton Fitness and Agility",
         "details": "Improve fitness, agility, and endurance for badminton.",
         "image": "https://media.istockphoto.com/id/1405378379/photo/boy-and-girl-playing-badminton-in-a-public-park.webp?b=1&s=170667a&w=0&k=20&c=zecLFb_FLLmZKyo9ww-oYLioe27hQH4fic-0gR0Qe6Y=",
@@ -380,7 +342,6 @@
         "price": 65
     },
     {
-        "_id": "73",
         "name": "Football Skills and Drills",
         "details": "Practice basic football skills, such as passing, shooting, and dribbling.",
         "image": "https://media.istockphoto.com/id/1411016542/photo/female-soccer-football-player-dribbling-ball-in-motion-at-stadium-during-sport-match-over.webp?b=1&s=170667a&w=0&k=20&c=rywd_xg_zOuD8fZwK7jMHlJHW7rid9rFvsE8_wUntuo=",
@@ -390,7 +351,6 @@
         "price": 45
     },
     {
-        "_id": "74",
         "name": "Position-Specific Training in Football",
         "details": "Specialized training for specific positions in football, including goalkeeper training.",
         "image": "https://media.istockphoto.com/id/1312143573/photo/football-soccer-ball-on-grass-field-on-stadium.webp?b=1&s=170667a&w=0&k=20&c=ViNtenxvaAYV64EriIYK4L5B1MH8-M0KvN81u0Ax3qk=",
@@ -400,7 +360,6 @@
         "price": 55
     },
     {
-        "_id": "75",
         "name": "Football Tactics and Strategy",
         "details": "Learn football tactics, formations, and strategic gameplay.",
         "image": "https://media.istockphoto.com/id/507687506/photo/soccer-player-kicking-ball-in-stadium.webp?b=1&s=170667a&w=0&k=20&c=OGK98hQ70K7wFbJ1ypg3LAUXfP33ZQ1wsiJma59uY9o=",
@@ -410,7 +369,6 @@
         "price": 60
     },
     {
-        "_id": "76",
         "name": "Youth Football League",
         "details": "Join a competitive youth football league for skill development and games.",
         "image": "https://media.istockphoto.com/id/637136152/photo/football-players-playing-football.webp?b=1&s=170667a&w=0&k=20&c=duSehv2GjQmdZdobW_r1UR_LRaCctE4N4Ol6LhZMX5o=",
@@ -420,7 +378,6 @@
         "price": 70
     },
     {
-        "_id": "77",
         "name": "Cricket Batting Techniques",
         "details": "Master the art of batting in cricket, including shot selection and timing.",
         "image": "https://media.istockphoto.com/id/1276613883/photo/montage-of-cricket-players-hitting-cricket-balls-in-outdoor-stadium.webp?b=1&s=170667a&w=0&k=20&c=r-67C-5M5RpjbTEYr0bzts0HSUv4w9ScJ9j7izMqGI0=",
@@ -430,7 +387,6 @@
         "price": 50
     },
     {
-        "_id": "78",
         "name": "Bowling Skills in Cricket",
         "details": "Learn various bowling techniques and deliveries in cricket.",
         "image": "https://media.istockphoto.com/id/497203317/photo/the-tools-for-a-batsman.webp?b=1&s=170667a&w=0&k=20&c=Xr5tRw7jXw-aGq9-BicshRYoN9Z2unI1bXTUwc0TmKo=",
@@ -440,7 +396,6 @@
         "price": 55
     },
     {
-        "_id": "79",
         "name": "Fielding and Catching in Cricket",
         "details": "Improve fielding skills, catching techniques, and agility in cricket.",
         "image": "https://media.istockphoto.com/id/177427917/photo/close-up-of-red-cricket-ball-and-bat-sitting-on-grass.webp?b=1&s=170667a&w=0&k=20&c=WGO8Ikx5NSa1W7KC922jlzgnSq46gnP6G14cGWsvVUw=",
@@ -450,7 +405,6 @@
         "price": 45
     },
     {
-        "_id": "80",
         "name": "Cricket Tactics and Match Strategy",
         "details": "Learn strategic aspects of cricket, including game plans and captaincy.",
         "image": "https://media.istockphoto.com/id/1387180699/photo/a-background-of-vintage-red-leather-cricket-balls-with-white-stitching.webp?b=1&s=170667a&w=0&k=20&c=8wDd54h597C0-ffVPCJIi2CmP7QNtPY0rleuTOMQx0Y=",

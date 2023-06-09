@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../../Providers/AuthProvider";
-import useSports from "../../../Hooks/useSports";
+import useCard from "../../../Hooks/useCard/useCard";
 
 
 const SingleClass = ({ singleClass }) => {
@@ -10,7 +10,7 @@ const SingleClass = ({ singleClass }) => {
     const navigate = useNavigate();
     const { user } = useContext(AuthContext);
     const { name, image, available_sets, category, details, instructor, price, students, _id } = singleClass;
-    const [, , , refetch] = useSports();
+    const [, refetch] = useCard()
 
     const handleAddToCard = _id => {
         if (user && user?.email) {

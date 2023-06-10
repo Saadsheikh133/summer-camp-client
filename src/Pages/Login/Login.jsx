@@ -5,6 +5,7 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import Swal from "sweetalert2";
 import authentication from '../../assets/images/authentication.gif'
+import SocialLogin from "../Shared/SocialLogin/SocialLogin";
 
 const Login = () => {
     const { loginUser } = useContext(AuthContext);
@@ -69,7 +70,8 @@ const Login = () => {
                             <div className="form-control mt-6">
                                 <input className="btn btn-primary" type="submit" value="Login" />
                             </div>
-                            <p className="text-red-600 my-4">{ error }</p>
+                            <SocialLogin></SocialLogin>
+                            <p className="text-red-600 my-4">{error}</p>
                         </div>
                     </form>
                 </div>

@@ -4,6 +4,7 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import Swal from "sweetalert2";
 import authentication from '../../assets/images/authentication.gif'
+import SocialLogin from "../Shared/SocialLogin/SocialLogin";
 
 
 const Register = () => {
@@ -27,7 +28,7 @@ const Register = () => {
                 })
                 updateUserProfile(data.name, data.image)
                     .then(() => {
-                        const saveUser = { name:data.name, email:data.email }
+                        const saveUser = { name: data.name, email: data.email, role: 'student' }
                         fetch('http://localhost:5000/addUsers', {
                             method: 'POST',
                             headers: { "content-type": "application/json" },
@@ -54,7 +55,7 @@ const Register = () => {
             <div className="hero min-h-screen ">
                 <div className="hero-content flex-col lg:flex-row-reverse w-full">
                     <div className="text-center lg:w-1/2">
-                        <img className="lg:h-[740px] lg:ml-10 object-cover w-full rounded-xl" src={authentication} alt="" />
+                        <img className="lg:h-[850px] lg:ml-10 object-cover w-full rounded-xl" src={authentication} alt="" />
                     </div>
                     <form onSubmit={handleSubmit(onSubmit)} className="card flex-shrink-0 w-full max-w-lg shadow-2xl bg-base-100 ">
                         <div className="card-body">
@@ -100,6 +101,7 @@ const Register = () => {
                             <div className="form-control mt-6">
                                 <input className="btn btn-primary" type="submit" value="Register" />
                             </div>
+                            <SocialLogin></SocialLogin>
                             <p className="text-red-600 my-4">{error}</p>
                         </div>
                     </form>

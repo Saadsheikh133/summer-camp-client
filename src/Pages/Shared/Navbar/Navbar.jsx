@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../../Providers/AuthProvider";
 import { FaShoppingCart } from 'react-icons/fa';
 import useCard from "../../../Hooks/useCard/useCard";
@@ -16,9 +16,9 @@ const Navbar = () => {
     }
 
     const itemInfo = <>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/instructor">Instructors</Link></li>
-        <li><Link to="/classes">Classes</Link></li>
+        <li><NavLink to="/">Home</NavLink></li>
+        <li><NavLink to="/instructor">Instructors</NavLink></li>
+        <li><NavLink to="/classes">Classes</NavLink></li>
         <li>
             <Link to="/dashboard/selectedClasses">
                 <button className="btn gap-2">

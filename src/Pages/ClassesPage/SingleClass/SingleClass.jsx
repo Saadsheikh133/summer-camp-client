@@ -9,7 +9,7 @@ const SingleClass = ({ singleClass }) => {
     const location = useLocation();
     const navigate = useNavigate();
     const { user } = useContext(AuthContext);
-    const { name, image, available_sets, category, details, instructor, price, students, _id } = singleClass;
+    const { name, image, available_sets, available_set, instructor, price, students, _id } = singleClass;
     const [, refetch] = useCard()
 
     const handleAddToCard = _id => {
@@ -57,13 +57,13 @@ const SingleClass = ({ singleClass }) => {
                 <div className="card-body">
                     <h2 className="card-title lg:text-2xl">Name: {name} </h2>
                     <h4 className="lg:text-xl">Instructor: {instructor} </h4>
-                    <p>Details: {details} </p>
-                    <p>Category: {category} </p>
-                    <p>Available Sets: {available_sets} </p>
-                    <p>Students: {students} </p>
+                    <p>Available Sets: {available_sets || available_set} </p>
                     <p className="absolute top-0 left-0 text-2xl font-semibold bg-black text-white py-1 px-4 rounded-xl ml-2 mt-2">${price} </p>
                     <div className="card-actions justify-center">
-                        <button onClick={() => handleAddToCard(_id)} className="btn btn-primary">select</button>
+                        {
+                            user.role === "student" &&
+                            <button onClick={() => handleAddToCard(_id)} className="btn btn-primary">select</button>
+                        }
                     </div>
                 </div>
             </div>

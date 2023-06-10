@@ -26,13 +26,24 @@ const Register = () => {
                     timer: 1500
                 })
                 updateUserProfile(data.name, data.image)
-                    .then(() => { })
-                    .catch()
-                logOut()
-                    .then()
-                    .catch()
-                navigate('/login')
-                reset();
+                    .then(() => {
+                        const saveUser = { name:data.name, email:data.email }
+                        fetch('http://localhost:5000/addUsers', {
+                            method: 'POST',
+                            headers: { "content-type": "application/json" },
+                            body: JSON.stringify(saveUser)
+                        })
+                            .then(res => res.json())
+                            .then(data => {
+                                if (data.insertedId) {
+                                    reset();
+                                    logOut()
+                                        .then()
+                                        .catch(error => setError(error.message))
+                                    navigate('/login')
+                                }
+                            })
+                    })
             })
             .catch(error => setError(error.message))
 

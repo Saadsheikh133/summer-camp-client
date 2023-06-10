@@ -16,7 +16,6 @@ const SelectedClasses = () => {
                             <th>Name</th>
                             <th>Email</th>
                             <th>Price</th>
-                            <th>Action</th>
                             <th>Delete</th>
                         </tr>
                     </thead>
@@ -38,9 +37,6 @@ const SelectedClasses = () => {
                                 <td>{singleClass.name} </td>
                                 <td>{singleClass.email}</td>
                                 <td>${singleClass.price}</td>
-                                <td>
-                                    <button className="btn btn-ghost btn-xs">update</button>
-                                </td>
                                 <td>
                                     <td className='text-white bg-red-600 btn btn-md'><FaTrash></FaTrash> </td>
                                 </td>

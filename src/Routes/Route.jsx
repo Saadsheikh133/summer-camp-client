@@ -8,6 +8,8 @@ import ClassesPage from "../Pages/ClassesPage/ClassesPage";
 import Dashboard from "../Layouts/Dashboard/Dashboard";
 import SelectedClasses from "../Pages/Dashboard/Student/SelectedClasses/SelectedClasses";
 import PrivateRoute from "./PricateRoute/PrivateRoute";
+import InroledClasses from "../Pages/Dashboard/Student/InroledClasses/InroledClasses";
+import AddClass from "../Pages/Dashboard/Instructor/AddClass/AddClass";
 
 const router = createBrowserRouter([
     {
@@ -42,9 +44,15 @@ const router = createBrowserRouter([
         children: [
             {
                 path: 'selectedClasses',
-                element: <PrivateRoute>
-                    <SelectedClasses></SelectedClasses>
-                </PrivateRoute>
+                element: <SelectedClasses></SelectedClasses>
+            },
+            {
+                path: 'inrolledClasses',
+                element: <InroledClasses></InroledClasses>
+            },
+            {
+                path: 'addClass',
+                element: <AddClass></AddClass>
             }
         ]
     }

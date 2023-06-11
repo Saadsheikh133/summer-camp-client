@@ -12,22 +12,25 @@ const Navbar = () => {
     const handleLogOut = () => {
         logOut()
             .then()
-        .catch(error => console.log(error.message))
+            .catch(error => console.log(error.message))
     }
 
     const itemInfo = <>
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/instructor">Instructors</NavLink></li>
         <li><NavLink to="/classes">Classes</NavLink></li>
-        <li>
+       
+            <li>
             <Link to="/dashboard/selectedClasses">
                 <button className="btn gap-2">
                     <FaShoppingCart></FaShoppingCart>
-                    <div className="badge badge-secondary">+{cart?.length || 0}</div>
+                    <div className="badge badge-neutral">+{cart?.length || 0}</div>
                 </button>
             </Link>
-        </li>
+        </li> 
         <li><Link to="/dashboard">Dashboard </Link></li>
+      
+
     </>
     return (
         <div className="navbar bg-black text-white fixed z-10 container mx-auto bg-opacity-40">

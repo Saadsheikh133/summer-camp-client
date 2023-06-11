@@ -1,10 +1,7 @@
-import { useContext } from "react";
-import { Link, Outlet } from "react-router-dom";
-import { AuthContext } from "../../Providers/AuthProvider";
+import {  NavLink, Outlet } from "react-router-dom";
 
 
 const Dashboard = () => {
-    const {user} = useContext(AuthContext)
     return (
         <div>
             <div className="drawer lg:drawer-open">
@@ -19,10 +16,10 @@ const Dashboard = () => {
                     <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
                     <ul className="menu p-4 w-80 h-full bg-orange-500 text-white">
                         {/* Sidebar content here */}
-                        <li><Link to="/dashboard/selectedClasses">My Selected Classes</Link></li>
-                        <li><Link to = "inrolledClasses">My Inrolled Classes</Link></li>
+                        <li><NavLink to="/dashboard/selectedClasses">My Selected Classes</NavLink></li>
+                        <li><NavLink to = "inrolledClasses">My Inrolled Classes</NavLink></li>
                         <div className="divider"></div>
-                        <li><Link to ="/">Home</Link></li>
+                        <li><NavLink to ="/">Home</NavLink></li>
                     </ul>
 
                 </div>

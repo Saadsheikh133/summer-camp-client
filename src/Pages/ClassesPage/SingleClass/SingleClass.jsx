@@ -51,8 +51,8 @@ const SingleClass = ({ singleClass }) => {
     }
 
     return (
-        <div>
-            <div className="card card-compact w-full h-full bg-base-100 shadow-xl relative">
+        <div className={available_sets === 0 || available_set === 0 ? "bg-red-600" : "bg-base-100"}>
+            <div className="card card-compact w-full h-full  shadow-xl relative">
                 <figure><img className="h-[260px] w-full object-cover" src={image} alt="Shoes" /></figure>
                 <div className="card-body">
                     <h2 className="card-title lg:text-2xl">Name: {name} </h2>
@@ -61,8 +61,8 @@ const SingleClass = ({ singleClass }) => {
                     <p className="absolute top-0 left-0 text-2xl font-semibold bg-black text-white py-1 px-4 rounded-xl ml-2 mt-2">${price} </p>
                     <div className="card-actions justify-center">
                         {
-                            user.role === "student" &&
-                            <button onClick={() => handleAddToCard(_id)} className="btn btn-primary">select</button>
+                        
+                            <button disabled={user?.role === "instructor" || user?.role === 'admin' || available_set === 0 || available_sets === 0} onClick={() => handleAddToCard(_id)} className="btn btn-primary">select</button>
                         }
                     </div>
                 </div>

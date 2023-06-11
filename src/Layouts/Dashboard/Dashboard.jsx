@@ -17,7 +17,7 @@ const Dashboard = () => {
                     <ul className="menu p-4 w-80 h-full bg-orange-500 text-white">
                         {/* Sidebar content here */}
                         <li><NavLink to="/dashboard/selectedClasses">My Selected Classes</NavLink></li>
-                        <li><NavLink to = "inrolledClasses">My Inrolled Classes</NavLink></li>
+                        <li><NavLink to = "enrolledClasses">My Inrolled Classes</NavLink></li>
                         <div className="divider"></div>
                         <li><NavLink to ="/">Home</NavLink></li>
                     </ul>

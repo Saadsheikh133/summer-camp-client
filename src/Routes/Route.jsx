@@ -7,11 +7,12 @@ import InstructorPage from "../Pages/InstructorPage/InstructorPage";
 import ClassesPage from "../Pages/ClassesPage/ClassesPage";
 import Dashboard from "../Layouts/Dashboard/Dashboard";
 import SelectedClasses from "../Pages/Dashboard/Student/SelectedClasses/SelectedClasses";
-import PrivateRoute from "./PricateRoute/PrivateRoute";
-import InroledClasses from "../Pages/Dashboard/Student/InroledClasses/InroledClasses";
 import AddClass from "../Pages/Dashboard/Instructor/AddClass/AddClass";
 import MyClasses from "../Pages/Dashboard/Instructor/MyClasses/MyClasses";
 import ManageUsers from "../Pages/Dashboard/Admin/MangeUsers/ManageUsers";
+import EnrolledClasses from "../Pages/Dashboard/Student/EnrolledClasses/EnrolledClasses";
+import PrivateRoute from "./PrivateRoute/PrivateRoute";
+import ManageClasses from "../Pages/Dashboard/Admin/ManageClasses/ManageClasses";
 
 const router = createBrowserRouter([
     {
@@ -28,7 +29,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/register',
-                element:<Register></Register>
+                element: <Register></Register>
             },
             {
                 path: '/instructor',
@@ -51,9 +52,9 @@ const router = createBrowserRouter([
                 </PrivateRoute>
             },
             {
-                path: 'inrolledClasses',
+                path: 'enrolledClasses',
                 element: <PrivateRoute>
-                    <InroledClasses></InroledClasses>
+                    <EnrolledClasses></EnrolledClasses>
                 </PrivateRoute>
             },
             {
@@ -67,6 +68,10 @@ const router = createBrowserRouter([
             {
                 path: 'manageUsers',
                 element: <ManageUsers></ManageUsers>
+            },
+            {
+                path: 'manageClasses',
+                element: <ManageClasses></ManageClasses>
             }
         ]
     }

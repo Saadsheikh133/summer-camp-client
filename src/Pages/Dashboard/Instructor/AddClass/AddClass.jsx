@@ -29,7 +29,6 @@ const AddClass = () => {
                     const newItem = { name, price: parseFloat(price), available_set: parseFloat(available_set), enroll_count: parseFloat(0), email, instructor, image: imgURL, status: "pending" }
                     axiosSecure.post('/createClasses', newItem)
                         .then(data => {
-                            console.log(data.data)
                             if (data.data.insertedId) {
                                 reset();
                                 Swal.fire({
@@ -42,7 +41,7 @@ const AddClass = () => {
                             }
                         })
                 }
-        })
+            })
     }
 
 
@@ -65,7 +64,7 @@ const AddClass = () => {
                                 <label className="label">
                                     <span className="label-text">Instructor Name</span>
                                 </label>
-                                <input type="text" value={user?.displayName} readOnly  placeholder="instructor name" className="input input-bordered" {...register("instructor", { required: true, maxLength: 80 })} />
+                                <input type="text" value={user?.displayName} readOnly placeholder="instructor name" className="input input-bordered" {...register("instructor", { required: true, maxLength: 80 })} />
                             </div>
                             <div className="form-control">
                                 <label className="label">
@@ -93,7 +92,7 @@ const AddClass = () => {
                                 </label>
                                 <input type="file" placeholder="class image" className="input input-bordered" {...register("image", { required: true, maxLength: 80 })} />
                             </div>
-                           
+
                             <div className="form-control mt-6">
                                 <input className="btn btn-primary" type="submit" value="Add Class" />
                             </div>

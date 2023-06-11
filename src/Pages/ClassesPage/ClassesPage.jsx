@@ -4,6 +4,7 @@ import SingleClass from "./SingleClass/SingleClass";
 
 const ClassesPage = () => {
     const [, , classes] = useSports();
+    
     return (
         <>
             <h2 className="text-5xl font-bold text-center py-20">All Classes Are Here!</h2>

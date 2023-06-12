@@ -1,10 +1,44 @@
+import Swal from "sweetalert2";
 import useManageClass from "../../../../Hooks/useManageClass/useManageClass";
 import ManageSingleCard from "./ManageSingleCard/ManageSingleCard";
+import { useState } from "react";
 
 
 const ManageClasses = () => {
-    const [classes] = useManageClass();
+    const [classes, refetch] = useManageClass();
+    const [id, setId] = useState('');
 
+
+    const handleClick = (data) => {
+        fetch(`http://localhost:5000/sendFeedback/${id}`, {
+            method: 'PUT',
+            headers: {
+                "content-type": "application/json"
+            },
+            body: JSON.stringify(data),
+        })
+            .then(res => res.json())
+            .then(result => {
+                console.log(result)
+                if (data.modifiedCount) {
+                    refetch();
+                    Swal.fire({
+                        position: 'top',
+                        icon: 'success',
+                        title: `Feedback successfully send`,
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                }
+        })
+    }
+
+    const handleMakeFeedback = (e) => {
+        e.preventDefault();
+        const form = e.target;
+        const feedback = form.feedback.value;
+        handleClick(feedback)
+    }
     return (
         <div>
             <div className="overflow-x-auto">
@@ -26,6 +60,9 @@ const ManageClasses = () => {
                         {
                             classes?.map((singleClass, index) => <ManageSingleCard
                                 key={singleClass._id}
+                                // handleMakeApprovedOrDeny={handleMakeApprovedOrDeny}
+                                handleMakeFeedback={handleMakeFeedback}
+                                setId={setId}
                                 singleClass={singleClass}
                                 index={index}
                             ></ManageSingleCard>)

@@ -1,6 +1,7 @@
 import { FaTrash } from "react-icons/fa";
 import useCard from "../../../../Hooks/useCard/useCard";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 const SelectedClasses = () => {
     const [card, refetch] = useCard();
@@ -34,6 +35,7 @@ const SelectedClasses = () => {
             }
         })
     }
+
     return (
         <div>
             <h2 className="text-5xl text-center font-bold my-20">My Selected Classes: {card.length}</h2>
@@ -70,7 +72,9 @@ const SelectedClasses = () => {
                                 <td>{singleClass.email}</td>
                                 <td>${singleClass.price}</td>
                                 <td>
-                                    <button className="btn btn-info">Pay</button>
+                                    <Link to={`/dashboard/payment/${singleClass}`} state={singleClass}>
+                                        <button className="btn btn-info">Pay</button>
+                                    </Link>
                                 </td>
                                 <td>
                                     <button onClick={() => handleDelete(singleClass._id)} className='text-white bg-red-600 btn btn-md'><FaTrash></FaTrash> </button>

@@ -9,7 +9,8 @@ const MyClasses = () => {
     const { register, handleSubmit } = useForm();
     const [id, setId] = useState("");
 
-    const handleClick = ( data) => {
+    const handleClick = (data) => {
+        console.log(data, id)
          fetch(`http://localhost:5000/updateClasses/${id}`, {
                 method: 'PUT',
                 headers: {

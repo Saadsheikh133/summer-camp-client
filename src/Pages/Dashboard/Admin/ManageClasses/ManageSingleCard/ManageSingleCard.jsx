@@ -8,7 +8,6 @@ const ManageSingleCard = ({ singleClass, index, handleMakeFeedback, setId }) => 
     const [, refetch] = useManageClass();
 
     const handleMakeApprovedOrDeny = (id, status) => {
-        console.log(id, status)
         fetch(`http://localhost:5000/approveClass/${id}`, {
             method: 'PATCH',
             headers: {

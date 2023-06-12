@@ -49,6 +49,7 @@ const SelectedClasses = () => {
                             <th>Name</th>
                             <th>Email</th>
                             <th>Price</th>
+                            <th>Available Set</th>
                             <th>Pay</th>
                             <th>Delete</th>
                         </tr>
@@ -71,8 +72,9 @@ const SelectedClasses = () => {
                                 <td>{singleClass.name} </td>
                                 <td>{singleClass.email}</td>
                                 <td>${singleClass.price}</td>
+                                <td>{singleClass.available_set}</td>
                                 <td>
-                                    <Link to={`/dashboard/payment/${singleClass}`} state={singleClass}>
+                                    <Link to={`/dashboard/payment/${singleClass._id}`} state={singleClass}>
                                         <button className="btn btn-info">Pay</button>
                                     </Link>
                                 </td>

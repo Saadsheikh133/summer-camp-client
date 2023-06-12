@@ -3,15 +3,11 @@
 @tailwind utilities;
 
 
-.drawer-side a.active {
+.nav a.active {
     color: white;
 }
 
-.drawer-side a {
+.nav a {
     background-color: transparent;
 }
 
-a.active{
-    color:white;
-    background-color: blueviolet;
-}

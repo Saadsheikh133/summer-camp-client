@@ -2,9 +2,11 @@ import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import { useContext, useEffect, useState } from "react";
 import useAxiosSecure from "../../../../Hooks/useAxiosSecure/useAxiosSecure";
 import { AuthContext } from "../../../../Providers/AuthProvider";
+import useCard from "../../../../Hooks/useCard/useCard";
 
 
 const CheckoutForm = ({ price, data }) => {
+    const [, refetch] = useCard();
     const stripe = useStripe();
     const elements = useElements();
     const { user } = useContext(AuthContext);
@@ -39,7 +41,6 @@ const CheckoutForm = ({ price, data }) => {
         });
 
         if (error) {
-            console.log('[error]', error);
             setError(error.message)
         } else {
             console.log('[PaymentMethod]', paymentMethod);
@@ -68,7 +69,16 @@ const CheckoutForm = ({ price, data }) => {
             const transactionId = paymentIntent.id
             setTransactionId(transactionId)
             const email = user?.email
-            const payment = {...data, transactionId, email }
+            const payment = { ...data, transactionId, email, date: new Date() }
+            console.log(payment)
+            axiosSecure.post('/enrolled', payment)
+                .then(res => {
+                    console.log(res.data)
+                    if (res.data.insertedId) {
+                        refetch();
+                        // alert()
+                    }
+            })
         }
     }
 

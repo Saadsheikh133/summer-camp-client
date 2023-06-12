@@ -14,15 +14,16 @@ const Dashboard = () => {
                     <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>
 
                 </div>
-                <div className="drawer-side">
+                <div className="drawer-side nav">
                     <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
-                    <ul className="menu p-4 w-80 h-full bg-orange-500 text-white">
+                    <ul className="menu p-4 w-80 h-full bg-orange-500">
                         {/* Sidebar content here */}
+                        <h2 className="text-2xl mb-4 text-center font-bold">Academic Sports</h2>
                         {
                             users.role === "student" &&
                             <>
                                 <li><NavLink to="/dashboard/selectedClasses">My Selected Classes</NavLink></li>
-                                <li><NavLink to="enrolledClasses">My Inrolled Classes</NavLink></li>
+                                <li><NavLink to="enrolledClasses">My Enrolled Classes</NavLink></li>
                             </>
                         }
                         {

@@ -4,6 +4,7 @@ import { AuthContext } from "../../../Providers/AuthProvider";
 import { FaShoppingCart } from 'react-icons/fa';
 import useCard from "../../../Hooks/useCard/useCard";
 import useUserRole from "../../../Hooks/useUserRole/useUserRole";
+import logo from '../../../../public/logo.svg'
 
 
 const Navbar = () => {
@@ -66,7 +67,10 @@ const Navbar = () => {
                         {itemInfo}
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case lg:text-4xl text-bold">Sports Today</a>
+                <div className="flex gap-4">
+                    <img className="rounded-full h-10" src={logo} alt="" />
+                    <h2 className="text-3xl text-white mb-4 text-center font-bold">Sports Today</h2>
+                </div>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 text-xl text-black">

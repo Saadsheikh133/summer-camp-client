@@ -1,20 +1,27 @@
+import { Slide } from "react-awesome-reveal";
 
-
-const SingleCard = ({singleClass}) => {
-    const { name, image, price } = singleClass;
+const SingleCard = ({ singleClass }) => {
     return (
-        <div>
-            <div className="hero min-h-screen bg-base-200">
-                <div className="hero-content flex-col lg:flex-row-reverse">
-                    <img src={image} className="max-w-sm rounded-lg shadow-2xl" />
-                    <div>
-                        <h1 className="text-5xl font-bold">{ name }</h1>
-                        <p className="py-6">{ price }</p>
-                        <button className="btn btn-primary">Get Started</button>
+        <>
+            <Slide>
+                <div key={singleClass._id} className="card w-full bg-base-100 shadow-xl image-full">
+                    <figure><img src={singleClass.image} alt="Shoes" /></figure>
+                    <div className="card-body">
+                        <figure><img className="h-[230px] rounded-xl" src={singleClass.image} alt="Shoes" /></figure>
+                        <h2 className="card-title">{singleClass.name}</h2>
+                        <p>instructor: {singleClass.instructor}</p>
+                        <p>available_sets: {singleClass.available_sets}</p>
+                        <p>Students: {singleClass.students}</p>
+                        <p>Details: {singleClass.details}</p>
+                        <p>Category: {singleClass.category}</p>
+                        <p>Price: ${singleClass.price}</p>
+                        <div className="card-actions justify-end">
+                            <button className="btn btn-primary">Select</button>
+                        </div>
                     </div>
-                </div>
             </div>
-        </div>
+        </Slide>
+        </>
     );
 };
 

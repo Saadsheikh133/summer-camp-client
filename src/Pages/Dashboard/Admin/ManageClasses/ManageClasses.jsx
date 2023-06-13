@@ -45,6 +45,7 @@ const ManageClasses = () => {
             <Helmet>
                 <title>Sports Today | Manage Classes</title>
             </Helmet>
+            <h2 className="text-5xl text-center font-bold mb-10">Manage Classes</h2>
             <div className="overflow-x-auto">
                 <table className="table">
                     {/* head */}

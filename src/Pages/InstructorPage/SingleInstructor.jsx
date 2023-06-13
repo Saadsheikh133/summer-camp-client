@@ -1,9 +1,10 @@
+import { Slide } from "react-awesome-reveal";
 
 
 const SingleInstructor = ({ instructor }) => {
     const { name, image, email, Number_of_Courses,  } = instructor;
     return (
-        <div>
+        <Slide>
             <div className="card card-side bg-base-100 shadow-xl">
                 <figure><img className="h-full object-cover" src={image} alt="Movie" /></figure>
                 <div className="card-body">
@@ -15,7 +16,7 @@ const SingleInstructor = ({ instructor }) => {
                     </div>
                 </div>
             </div>
-        </div>
+        </Slide>
     );
 };
 

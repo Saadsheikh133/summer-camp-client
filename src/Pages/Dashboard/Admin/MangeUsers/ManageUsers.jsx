@@ -51,6 +51,7 @@ const ManageUsers = () => {
             <Helmet>
                 <title>Sports Today | Manage Users</title>
             </Helmet>
+            <h2 className="text-5xl text-center font-bold mb-20">Manage User</h2>
             <div className="overflow-x-auto">
                 <table className="table">
                     {/* head */}

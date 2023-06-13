@@ -58,13 +58,13 @@ const Banner = () => {
                     <img className="h-[500px] w-full object-cover rounded-xl" src={tenise} alt="" />
                     <div className="absolute flex items-center text-white w-full h-full bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)] left-0 top-0">
                         <div className="space-y-7 lg:w-3/4 lg:pl-12 ">
-                            <h2 className="text-4xl text-semibold">Tennis</h2>
+                            <h2 className="text-4xl text-semibold pt-4">Tennis</h2>
                             <p className="tracking-wide lg:text-xl">The racket sport traditionally named lawn tennis, invented in Birmingham, England, now commonly known simply as tennis, is the direct descendant of what is now denoted real tennis or royal tennis, which continues to be played today as a separate sport with more complex rules. Most rules of (lawn) tennis derive from this precursor and it is reasonable to see both sports as variations of the same game. Most historians believe that tennis originated in the monastic cloisters in northern France in the 12th century, but the ball was then struck with the palm of the hand, hence the name jeu de paume (game of the palm).It was not until the 16th century that rackets came into use and the game began to be called tennis. It was popular in England and France, and Henry VIII of England was a big fan of the game, now referred to as real tennis.</p>
                         </div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide data-hash="slide5">
-                    <img className="h-[500px] w-full object-cover rounded-xl" src={football} alt="" />
+                    <img className="h-[500px] w-full object-cover mt-10 rounded-xl" src={football} alt="" />
                     <div className="absolute flex items-center text-white w-full h-full bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)] left-0 top-0">
                         <div className="space-y-7 lg:w-3/4 lg:pl-12 ">
                             <h2 className="text-4xl text-semibold">Football</h2>

@@ -1,11 +1,15 @@
-
+import logo from '../../../../public/logo.svg'
 
 const Footer = () => {
     return (
         <footer className=' w-full rounded-t-xl  text-neutral-content mt-10'>
             <div className='md:flex justify-center items-center bg-neutral rounded-t-xl mb-0'>
-                <div className="footer   py-9 px-4 w-1/2 ">
-                    <div className='md:w-1/3 mx-auto'>
+                <div className="footer py-9 px-4 lg:w-1/2 ">
+                <div>
+                    <img className="rounded-full h-10" src={logo} alt="" />
+                    <h2 className="text-3xl text-white mb-4 text-center font-bold">Sports Today</h2>
+                </div>
+                    <div className=' mx-auto text-center lg:text-start w-full'>
                         <span className="footer-title">Contact Us</span>
                         <a className="link link-hover">123 ABS Street, Uni 21, Bangladesh</a>
                         <a className="link link-hover">+88 123456789</a>
@@ -13,7 +17,7 @@ const Footer = () => {
                         <a className="link link-hover">web.programming-hero.com</a>
                     </div>
                 </div>
-                <div className='md:w-1/2 md:px-4 py-16 footer bg-slate-600 text-neutral-content rounded-r-xl'>
+                <div className='lg:w-1/2 md:px-4 py-16 footer bg-slate-600 text-neutral-content rounded-r-xl'>
                     <div className=' mx-auto md:w-1/3'>
                         <span className="footer-title">Follow us</span>
                         <span className="">Join us with social media</span>

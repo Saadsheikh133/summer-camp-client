@@ -1,5 +1,6 @@
 import {  NavLink, Outlet } from "react-router-dom";
 import useUserRole from "../../Hooks/useUserRole/useUserRole";
+import logo from '../../../public/logo.svg'
 
 
 const Dashboard = () => {
@@ -18,12 +19,17 @@ const Dashboard = () => {
                     <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
                     <ul className="menu p-4 w-80 h-full bg-orange-500">
                         {/* Sidebar content here */}
-                        <h2 className="text-3xl text-white mb-4 text-center font-bold">Sports Today</h2>
+                        <div className="flex gap-4 mb-4">
+                            <img className="rounded-full h-10" src={logo} alt="" />
+                            <h2 className="text-3xl text-white mb-4 text-center font-bold">Sports Today</h2>
+                       </div>
                         {
                             users.role === "student" &&
                             <>
+                                <li><NavLink to="paymentHistory">My Payment History</NavLink></li>
                                 <li><NavLink to="/dashboard/selectedClasses">My Selected Classes</NavLink></li>
                                 <li><NavLink to="enrolledClasses">My Enrolled Classes</NavLink></li>
+                               
                             </>
                         }
                         {

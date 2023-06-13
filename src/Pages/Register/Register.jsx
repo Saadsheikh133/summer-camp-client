@@ -6,6 +6,7 @@ import Swal from "sweetalert2";
 import authentication from '../../assets/images/authentication.gif'
 import SocialLogin from "../Shared/SocialLogin/SocialLogin";
 import useAxiosSecure from "../../Hooks/useAxiosSecure/useAxiosSecure";
+import { Helmet } from "react-helmet-async";
 
 
 const Register = () => {
@@ -49,6 +50,9 @@ const Register = () => {
     };
     return (
         <div>
+            <Helmet>
+                <title>Sports Today | Register</title>
+            </Helmet>
             <div className="hero min-h-screen ">
                 <div className="hero-content flex-col lg:flex-row-reverse w-full">
                     <div className="text-center lg:w-1/2">

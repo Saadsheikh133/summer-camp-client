@@ -1,6 +1,7 @@
 import Swal from "sweetalert2";
 import useAxiosSecure from "../../../../Hooks/useAxiosSecure/useAxiosSecure";
 import { useQuery } from "@tanstack/react-query";
+import { Helmet } from "react-helmet-async";
 
 
 const ManageUsers = () => {
@@ -47,6 +48,9 @@ const ManageUsers = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Sports Today | Manage Users</title>
+            </Helmet>
             <div className="overflow-x-auto">
                 <table className="table">
                     {/* head */}

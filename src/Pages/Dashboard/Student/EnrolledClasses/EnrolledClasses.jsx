@@ -1,8 +1,12 @@
+import { Helmet } from "react-helmet-async";
 
 
 const EnrolledClasses = () => {
     return (
         <div>
+            <Helmet>
+                <title>Sports Today | Enrolled Classes</title>
+            </Helmet>
             <div className="overflow-x-auto">
                 <table className="table">
                     {/* head */}

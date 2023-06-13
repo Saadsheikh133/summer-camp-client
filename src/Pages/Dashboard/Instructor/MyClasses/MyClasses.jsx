@@ -1,42 +1,48 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../../../Providers/AuthProvider";
 import { useForm } from "react-hook-form";
+import useAxiosSecure from "../../../../Hooks/useAxiosSecure/useAxiosSecure";
+import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 
 const MyClasses = () => {
     const { user } = useContext(AuthContext);
     const [classes, setClasses] = useState();
-    const { register, handleSubmit } = useForm();
+    const { register, handleSubmit, reset } = useForm();
     const [id, setId] = useState("");
+    const [axiosSecure] = useAxiosSecure();
 
     const handleClick = (data) => {
-         fetch(`http://localhost:5000/updateClasses/${id}`, {
-                method: 'PUT',
-                headers: {
-                    "content-type": 'application/json'
-                },
-                body: JSON.stringify(data)
-            })
-                .then(res => res.json())
-             .then(result => console.log(result))
+         axiosSecure.put(`/updateClasses/${id}`, data)
+             .then(result => {
+                 if (result.data.modifiedCount) {
+                     reset();
+                     Swal.fire({
+                         position: 'top',
+                         icon: 'success',
+                         title: 'Class updated successfully',
+                         showConfirmButton: false,
+                         timer: 1500
+                     })
+                 }
+             })
     }
         const onSubmit = (data) => {
            handleClick(data)
 
         }
-   
-
-   
-   
 
     useEffect(() => {
-        fetch(`http://localhost:5000/getClasses/${user.email}`)
-            .then(res => res.json())
-        .then(data => setClasses(data))
-    }, [user])
+        axiosSecure.get(`/getClasses/${user.email}`)
+        .then(data => setClasses(data.data))
+    }, [user, axiosSecure])
 
     return (
         <div>
+            <Helmet>
+                <title>Sports Today | My Classes</title>
+            </Helmet>
             <h2 className="text-5xl text-center font-bold my-10">My Classes</h2>
             <div className="overflow-x-auto">
                 <table className="table">

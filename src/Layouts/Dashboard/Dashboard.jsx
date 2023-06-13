@@ -18,7 +18,7 @@ const Dashboard = () => {
                     <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
                     <ul className="menu p-4 w-80 h-full bg-orange-500">
                         {/* Sidebar content here */}
-                        <h2 className="text-2xl mb-4 text-center font-bold">Academic Sports</h2>
+                        <h2 className="text-3xl text-white mb-4 text-center font-bold">Sports Today</h2>
                         {
                             users.role === "student" &&
                             <>

@@ -1,16 +1,16 @@
 import { useQuery } from "@tanstack/react-query";
-// import useAxiosSecure from "../useAxiosSecure/useAxiosSecure";
+import useAxiosSecure from "../useAxiosSecure/useAxiosSecure";
 
 
 const useManageClass = () => {
-    // const [axiosSecure] = useAxiosSecure();
+    const [axiosSecure] = useAxiosSecure();
 
     const { data: manageClass = [], refetch } = useQuery({
         queryKey: ['manageClass'],
 
         queryFn: async () => {
-            const res = await fetch('http://localhost:5000/getClasses')
-            return res.json();
+            const res = await axiosSecure.get('/getClasses')
+            return res.data;
         }
     })
     return [manageClass, refetch]

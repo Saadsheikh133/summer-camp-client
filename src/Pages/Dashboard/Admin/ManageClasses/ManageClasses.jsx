@@ -2,6 +2,7 @@ import Swal from "sweetalert2";
 import useManageClass from "../../../../Hooks/useManageClass/useManageClass";
 import ManageSingleCard from "./ManageSingleCard/ManageSingleCard";
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 
 const ManageClasses = () => {
@@ -41,6 +42,9 @@ const ManageClasses = () => {
     }
     return (
         <div>
+            <Helmet>
+                <title>Sports Today | Manage Classes</title>
+            </Helmet>
             <div className="overflow-x-auto">
                 <table className="table">
                     {/* head */}
@@ -60,7 +64,6 @@ const ManageClasses = () => {
                         {
                             classes?.map((singleClass, index) => <ManageSingleCard
                                 key={singleClass._id}
-                                // handleMakeApprovedOrDeny={handleMakeApprovedOrDeny}
                                 handleMakeFeedback={handleMakeFeedback}
                                 setId={setId}
                                 singleClass={singleClass}

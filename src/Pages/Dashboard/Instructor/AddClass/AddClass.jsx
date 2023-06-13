@@ -3,6 +3,7 @@ import useAxiosSecure from "../../../../Hooks/useAxiosSecure/useAxiosSecure";
 import { useContext } from "react";
 import { AuthContext } from "../../../../Providers/AuthProvider";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 
 const image_hosting_token = import.meta.env.VITE_IMAGE_UPLOAD_TOKEN;
@@ -47,6 +48,9 @@ const AddClass = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Sports Today | Add A Class</title>
+            </Helmet>
             <div className="hero min-h-screen bg-base-200 w-full">
                 <div className="hero-content flex-col w-full">
                     <div className="text-center">

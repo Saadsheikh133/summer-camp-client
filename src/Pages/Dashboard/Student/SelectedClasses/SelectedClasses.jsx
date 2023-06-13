@@ -3,6 +3,7 @@ import useCard from "../../../../Hooks/useCard/useCard";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
 import useAxiosSecure from "../../../../Hooks/useAxiosSecure/useAxiosSecure";
+import { Helmet } from "react-helmet-async";
 
 const SelectedClasses = () => {
     const [card, refetch] = useCard();
@@ -37,6 +38,9 @@ const SelectedClasses = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Sports Today | Selected Classes</title>
+            </Helmet>
             <h2 className="text-5xl text-center font-bold my-20">My Selected Classes: {card.length}</h2>
             <div className="overflow-x-auto">
                 <table className="table">

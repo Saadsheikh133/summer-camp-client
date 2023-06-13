@@ -6,6 +6,7 @@ import { AuthContext } from "../../Providers/AuthProvider";
 import Swal from "sweetalert2";
 import authentication from '../../assets/images/authentication.gif'
 import SocialLogin from "../Shared/SocialLogin/SocialLogin";
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
     const { loginUser } = useContext(AuthContext);
@@ -38,6 +39,9 @@ const Login = () => {
     console.log(errors)
     return (
         <div>
+            <Helmet>
+                <title>Sports Today | Login</title>
+            </Helmet>
             <div className="hero min-h-screen ">
                 <div className="hero-content flex-col lg:flex-row-reverse w-full">
                     <div className="text-center lg:text-left lg:w-1/2">

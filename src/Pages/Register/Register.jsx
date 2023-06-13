@@ -5,6 +5,7 @@ import { AuthContext } from "../../Providers/AuthProvider";
 import Swal from "sweetalert2";
 import authentication from '../../assets/images/authentication.gif'
 import SocialLogin from "../Shared/SocialLogin/SocialLogin";
+import useAxiosSecure from "../../Hooks/useAxiosSecure/useAxiosSecure";
 
 
 const Register = () => {
@@ -12,6 +13,7 @@ const Register = () => {
     const { registerUser, updateUserProfile, logOut } = useContext(AuthContext);
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
     const navigate = useNavigate();
+    const [axiosSecure] = useAxiosSecure();
 
     const onSubmit = data => {
         setError('');
@@ -29,14 +31,9 @@ const Register = () => {
                 updateUserProfile(data.name, data.image)
                     .then(() => {
                         const saveUser = { name: data.name, email: data.email, role: 'student' }
-                        fetch('http://localhost:5000/addUsers', {
-                            method: 'POST',
-                            headers: { "content-type": "application/json" },
-                            body: JSON.stringify(saveUser)
-                        })
-                            .then(res => res.json())
+                       axiosSecure.post('/addUsers', saveUser)
                             .then(data => {
-                                if (data.insertedId) {
+                                if (data.data.insertedId) {
                                     reset();
                                     logOut()
                                         .then()

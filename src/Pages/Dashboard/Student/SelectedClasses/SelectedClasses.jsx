@@ -2,9 +2,11 @@ import { FaTrash } from "react-icons/fa";
 import useCard from "../../../../Hooks/useCard/useCard";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
+import useAxiosSecure from "../../../../Hooks/useAxiosSecure/useAxiosSecure";
 
 const SelectedClasses = () => {
     const [card, refetch] = useCard();
+    const [axiosSecure] = useAxiosSecure();
 
 
     const handleDelete = (_id) => {
@@ -18,12 +20,9 @@ const SelectedClasses = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/removeClasses/${_id}`, {
-                    method: 'DELETE'
-                })
-                    .then(res => res.json())
+                axiosSecure.delete(`http://localhost:5000/removeClasses/${_id}`)
                     .then(data => {
-                        if (data.deletedCount > 0) {
+                        if (data.data.deletedCount > 0) {
                             refetch();
                             Swal.fire(
                                 'Deleted!',
@@ -74,7 +73,7 @@ const SelectedClasses = () => {
                                 <td>${singleClass.price}</td>
                                 <td>{singleClass.available_set}</td>
                                 <td>
-                                    <Link to={`/dashboard/payment/${singleClass._id}`} state={singleClass}>
+                                    <Link to={`/dashboard/payment/${singleClass}`} state={singleClass}>
                                         <button className="btn btn-info">Pay</button>
                                     </Link>
                                 </td>

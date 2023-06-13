@@ -3,6 +3,8 @@ import { useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../../Providers/AuthProvider";
 import useCard from "../../../Hooks/useCard/useCard";
+import useUserRole from "../../../Hooks/useUserRole/useUserRole";
+import useAxiosSecure from "../../../Hooks/useAxiosSecure/useAxiosSecure";
 
 
 const SingleClass = ({ singleClass }) => {
@@ -10,19 +12,17 @@ const SingleClass = ({ singleClass }) => {
     const navigate = useNavigate();
     const { user } = useContext(AuthContext);
     const { name, image, available_set, instructor, price, students, _id } = singleClass;
-    const [, refetch] = useCard()
+    const [, refetch] = useCard();
+    const [users] = useUserRole();
+    const [axiosSecure] = useAxiosSecure();
+    
 
     const handleAddToCard = _id => {
         if (user && user?.email) {
             const cartItem = { itemId: _id, name, image, price, students, email: user?.email, instructor, available_set }
-            fetch('http://localhost:5000/addToCarts', {
-                method: 'POST',
-                headers: { "content-type": "application/json" },
-                body: JSON.stringify(cartItem)
-            })
-                .then(res => res.json())
+            axiosSecure.post('/addToCarts',cartItem)
                 .then(data => {
-                    if (data.insertedId) {
+                    if (data.data.insertedId) {
                         refetch();  //refetch cart to update the number of items in the cart.
                         Swal.fire({
                             position: 'top',
@@ -51,8 +51,8 @@ const SingleClass = ({ singleClass }) => {
     }
 
     return (
-        <div className={ available_set === 0 ? "bg-red-600" : "bg-base-100"}>
-            <div className="card card-compact w-full h-full  shadow-xl relative">
+        <div className={ available_set === 0 ? "bg-red-600" : ""}>
+            <div className="card card-compact w-full h-full bg-base-100 shadow-xl relative">
                 <figure><img className="h-[260px] w-full object-cover" src={image} alt="Shoes" /></figure>
                 <div className="card-body">
                     <h2 className="card-title lg:text-2xl">Name: {name} </h2>
@@ -62,7 +62,7 @@ const SingleClass = ({ singleClass }) => {
                     <div className="card-actions justify-center">
                         {
                         
-                            <button disabled={user?.role === "instructor" || user?.role === 'admin' || available_set === 0 } onClick={() => handleAddToCard(_id)} className="btn btn-primary">select</button>
+                            <button disabled={users?.role === "instructor" || users?.role === 'admin' || available_set === 0 } onClick={() => handleAddToCard(_id)} className="btn btn-primary">select</button>
                         }
                     </div>
                 </div>

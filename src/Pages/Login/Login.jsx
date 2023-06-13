@@ -18,7 +18,6 @@ const Login = () => {
 
     const onSubmit = data => {
         setError('');
-        console.log(data)
         loginUser(data.email, data.password)
             .then(result => {
                 const loggedUser = result.user;

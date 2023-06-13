@@ -7,8 +7,7 @@ const stripePromise = loadStripe(import.meta.env.VITE_PAYMENT_KEY_PK);
 const Payment = ( ) => {
     const location = useLocation();
     const data = location.state;
-    console.log(data.price)
-    console.log(data._id)
+    console.log(data)
     const price = parseFloat(data.price)
     return (
         <div>

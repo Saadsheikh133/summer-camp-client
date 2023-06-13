@@ -10,7 +10,6 @@ const MyClasses = () => {
     const [id, setId] = useState("");
 
     const handleClick = (data) => {
-        console.log(data, id)
          fetch(`http://localhost:5000/updateClasses/${id}`, {
                 method: 'PUT',
                 headers: {
@@ -19,13 +18,7 @@ const MyClasses = () => {
                 body: JSON.stringify(data)
             })
                 .then(res => res.json())
-             .then(result => {
-                 if (result.modifiedCount > 0) {
-                    //  const remaining = classes.filter(singleClass => singleClass._id !== id)
-                    //  console.log(remaining)
-                    //  setClasses(remaining)
-                    }
-                })
+             .then(result => console.log(result))
     }
         const onSubmit = (data) => {
            handleClick(data)

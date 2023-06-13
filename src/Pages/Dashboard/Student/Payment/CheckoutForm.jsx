@@ -69,11 +69,11 @@ const CheckoutForm = ({ price, data }) => {
             const transactionId = paymentIntent.id
             setTransactionId(transactionId)
             const email = user?.email
-            const payment = { ...data, transactionId, email, date: new Date() }
-            console.log(payment)
+            // delete data._id;
+            const payment = {
+                ...data, transactionId, email, date: new Date(),enroll_count: 0 }
             axiosSecure.post('/enrolled', payment)
                 .then(res => {
-                    console.log(res.data)
                     if (res.data.insertedId) {
                         refetch();
                         // alert()

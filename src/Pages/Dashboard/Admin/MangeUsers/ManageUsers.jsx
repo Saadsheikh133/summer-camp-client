@@ -7,18 +7,16 @@ const ManageUsers = () => {
     const [axiosSecure] = useAxiosSecure();
     const { data: users = [], refetch } = useQuery(['users'], async () => {
         const res = await axiosSecure.get('/findUsers')
+        console.log(res.data)
         return res.data;
     })
 
 
     const handleUserRoleAdmin = (user) => {
-        fetch(`http://localhost:5000/users/admin/${user._id}`, {
-            method: 'PATCH'
-        })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data)
-                if (data.modifiedCount) {
+        axiosSecure.patch(`/users/admin/${user._id}`)
+            .then(res => {
+                console.log(res.data)
+                if (res.data.modifiedCount) {
                     refetch();
                     Swal.fire({
                         position: 'top',
@@ -32,12 +30,9 @@ const ManageUsers = () => {
     }
 
     const handleUserInstructor = user => {
-        fetch(`http://localhost:5000/users/instructor/${user._id}`, {
-            method: 'PATCH'
-        })
-            .then(res => res.json())
-            .then(data => {
-                if (data.modifiedCount) {
+        axiosSecure.patch(`/users/instructor/${user._id}`)
+            .then(res => {
+                if (res.data.modifiedCount) {
                     refetch();
                     Swal.fire({
                         position: 'top',
@@ -47,9 +42,9 @@ const ManageUsers = () => {
                         timer: 1500
                     })
                 }
-        })
+            })
     }
- 
+
     return (
         <div>
             <div className="overflow-x-auto">

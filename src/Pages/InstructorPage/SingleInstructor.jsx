@@ -1,7 +1,6 @@
 
 
 const SingleInstructor = ({ instructor }) => {
-    console.log(instructor)
     const { name, image, email, Number_of_Courses,  } = instructor;
     return (
         <div>

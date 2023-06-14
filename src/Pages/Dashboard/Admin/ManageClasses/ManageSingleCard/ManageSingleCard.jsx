@@ -10,7 +10,7 @@ const ManageSingleCard = ({ singleClass, index, handleMakeFeedback, setId }) => 
     const [axiosSecure] = useAxiosSecure();
 
     const handleMakeApprovedOrDeny = (id, status) => {
-        axiosSecure.patch(`http://localhost:5000/approveClass/${id}`, {status })
+        axiosSecure.patch(`https://b7a12-summer-camp-server.vercel.app/approveClass/${id}`, {status })
             .then(data => {
                 if (data.data.modifiedCount) {
                     refetch();

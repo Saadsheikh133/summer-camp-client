@@ -17,7 +17,9 @@ const Register = () => {
     const [axiosSecure] = useAxiosSecure();
 
     const onSubmit = data => {
-        setError('');
+        console.log(data.password, data.confirm_password)
+        if (data.password === data.confirm_password) {
+            setError('');
         registerUser(data.email, data.password)
             .then(result => {
                 const loggedUser = result.user;
@@ -44,7 +46,11 @@ const Register = () => {
                             })
                     })
             })
-            .catch(error => setError(error.message))
+                .catch(error => setError(error.message))
+        }
+        else {
+            setError("Password and confirm password not match. Please provide a same password.")
+        }
 
 
     };
@@ -90,7 +96,7 @@ const Register = () => {
                                 <label className="label">
                                     <span className="label-text">Confirm Password</span>
                                 </label>
-                                <input type="password" placeholder="confirm password" className="input input-bordered bg-slate-200" {...register("confirm_password", { required: true, maxLength: 80 })} />
+                                <input type="password" placeholder="confirm Password" className="input input-bordered bg-slate-200" {...register("confirm_password", { required: true, maxLength: 80 })} />
                             </div>
                             <div className="form-control">
                                 <label className="label">

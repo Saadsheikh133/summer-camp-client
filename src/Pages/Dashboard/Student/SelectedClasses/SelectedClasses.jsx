@@ -22,7 +22,7 @@ const SelectedClasses = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                axiosSecure.delete(`http://localhost:5000/removeClasses/${_id}`)
+                axiosSecure.delete(`https://b7a12-summer-camp-server.vercel.app/removeClasses/${_id}`)
                     .then(data => {
                         if (data.data.deletedCount > 0) {
                             refetch();

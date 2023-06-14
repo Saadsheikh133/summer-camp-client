@@ -11,7 +11,7 @@ import { Helmet } from "react-helmet-async";
 const Login = () => {
     const { loginUser } = useContext(AuthContext);
     const [error, setError] = useState('');
-    const { register, handleSubmit, formState: { errors }, reset } = useForm();
+    const { register, handleSubmit, reset } = useForm();
     const [show, setShow] = useState(false);
     const location = useLocation();
     const navigate = useNavigate();
@@ -35,8 +35,6 @@ const Login = () => {
             })
         .catch(error => setError(error.message))
     }
-
-    console.log(errors)
     return (
         <div>
             <Helmet>

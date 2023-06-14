@@ -16,7 +16,7 @@ const ManageClasses = () => {
 
     const handleClick = (data) => {
         console.log(data)
-        axiosSecure.put(`http://localhost:5000/sendFeedback/${id}`, { feedback:data })
+        axiosSecure.put(`https://b7a12-summer-camp-server.vercel.app/sendFeedback/${id}`, { feedback:data })
             .then(result => {
                 console.log(result.data)
                 if (result.data.modifiedCount) {

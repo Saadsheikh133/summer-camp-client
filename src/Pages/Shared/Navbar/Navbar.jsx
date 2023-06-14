@@ -49,10 +49,9 @@ const Navbar = () => {
                 </Link>
             </li>
         }
-        {
-            users.role === "admin" || users.role === 'instructor' &&
-            <li><Link to="/dashboard">Dashboard </Link></li>
-        }
+
+        <li><Link to="/dashboard">Dashboard </Link></li>
+
 
 
     </>

@@ -4,6 +4,8 @@ import { useForm } from "react-hook-form";
 import useAxiosSecure from "../../../../Hooks/useAxiosSecure/useAxiosSecure";
 import Swal from "sweetalert2";
 import { Helmet } from "react-helmet-async";
+import { Slide } from "react-awesome-reveal";
+import { Link } from "react-router-dom";
 
 
 const MyClasses = () => {
@@ -14,32 +16,32 @@ const MyClasses = () => {
     const [axiosSecure] = useAxiosSecure();
 
     const handleClick = (data) => {
-         axiosSecure.put(`/updateClasses/${id}`, data)
-             .then(result => {
-                 if (result.data.modifiedCount) {
-                     reset();
-                     Swal.fire({
-                         position: 'top',
-                         icon: 'success',
-                         title: 'Class updated successfully',
-                         showConfirmButton: false,
-                         timer: 1500
-                     })
-                 }
-             })
+        axiosSecure.put(`/updateClasses/${id}`, data)
+            .then(result => {
+                if (result.data.modifiedCount) {
+                    reset();
+                    Swal.fire({
+                        position: 'top',
+                        icon: 'success',
+                        title: 'Class updated successfully',
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                }
+            })
     }
-        const onSubmit = (data) => {
-           handleClick(data)
+    const onSubmit = (data) => {
+        handleClick(data)
 
-        }
+    }
 
     useEffect(() => {
         axiosSecure.get(`/getClasses/${user.email}`)
-        .then(data => setClasses(data.data))
+            .then(data => setClasses(data.data))
     }, [user, axiosSecure])
 
     return (
-        <div>
+        <Slide>
             <Helmet>
                 <title>Sports Today | My Classes</title>
             </Helmet>
@@ -63,7 +65,7 @@ const MyClasses = () => {
                     <tbody className="bg-white">
                         {
                             classes?.map((singleClass, index) => <tr key={singleClass._id}>
-                                <td>{ index + 1 }</td>
+                                <td>{index + 1}</td>
                                 <td>
                                     <div className="flex items-center space-x-3">
                                         <div className="avatar">
@@ -73,24 +75,37 @@ const MyClasses = () => {
                                         </div>
                                     </div>
                                 </td>
-                                <td>{ singleClass.name } </td>
-                                <td>{ singleClass.instructor } </td>
-                                <td>{ singleClass.price }</td>
-                                <td>{singleClass.enroll_count }</td>
+                                <td>{singleClass.name} </td>
+                                <td>{singleClass.instructor} </td>
+                                <td>{singleClass.price}</td>
+                                <td>{singleClass.enroll_count}</td>
                                 <td>{singleClass.status}</td>
                                 <td>
                                     <label onClick={() => setId(singleClass._id)} htmlFor="my_modal_7" className="btn btn-primary btn-sm">Update</label>
                                 </td>
                                 <td>
-                                    <button className="btn btn-ghost btn-xs">Feedback</button>
+                                    {/* The button to open modal */}
+                                    <Link to={`/dashboard/feedback/${singleClass._id}`} state={singleClass.feedback}>
+                                        <label htmlFor="my_modal_6" disabled={!singleClass.feedback} className="btn btn-ghost btn-xs">Feedback</label>
+                                    </Link>
+                                    {/* Put this part before </body> tag */}
+                                    {/* <input type="checkbox" id="my_modal_6" className="modal-toggle" />
+                                    <div className="modal">
+                                        <div className="modal-box">
+                                            <h3 className="font-bold text-3xl text-center mb-2">{singleClass.name}</h3>
+                                            <p className="py-4">{singleClass.feedback}</p>
+                                            <div className="modal-action">
+                                                <label htmlFor="my_modal_6" className="btn">Close!</label>
+                                            </div>
+                                        </div>
+                                    </div> */}
                                 </td>
                             </tr>)
-                       }
-                        
+                        }
+
                     </tbody>
                 </table>
                 <div>
-                    {/* The button to open modal */}
 
 
                     {/* Put this part before </body> tag */}
@@ -145,7 +160,7 @@ const MyClasses = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </Slide>
     );
 };
 

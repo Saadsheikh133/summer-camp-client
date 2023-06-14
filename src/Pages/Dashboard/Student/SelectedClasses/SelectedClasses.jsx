@@ -4,6 +4,7 @@ import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
 import useAxiosSecure from "../../../../Hooks/useAxiosSecure/useAxiosSecure";
 import { Helmet } from "react-helmet-async";
+import { Slide } from "react-awesome-reveal";
 
 const SelectedClasses = () => {
     const [card, refetch] = useCard();
@@ -37,7 +38,7 @@ const SelectedClasses = () => {
     }
 
     return (
-        <div>
+        <Slide>
             <Helmet>
                 <title>Sports Today | Selected Classes</title>
             </Helmet>
@@ -89,7 +90,7 @@ const SelectedClasses = () => {
                     </tbody>
                 </table>
             </div>
-        </div>
+        </Slide>
     );
 };
 

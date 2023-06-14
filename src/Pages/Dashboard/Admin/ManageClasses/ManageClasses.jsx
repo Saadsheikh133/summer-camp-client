@@ -3,25 +3,23 @@ import useManageClass from "../../../../Hooks/useManageClass/useManageClass";
 import ManageSingleCard from "./ManageSingleCard/ManageSingleCard";
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
+import { Slide } from "react-awesome-reveal";
+import useAxiosSecure from "../../../../Hooks/useAxiosSecure/useAxiosSecure";
 
 
 const ManageClasses = () => {
     const [classes, refetch] = useManageClass();
     const [id, setId] = useState('');
+    const [axiosSecure] = useAxiosSecure();
+    console.log(id)
 
 
     const handleClick = (data) => {
-        fetch(`http://localhost:5000/sendFeedback/${id}`, {
-            method: 'PUT',
-            headers: {
-                "content-type": "application/json"
-            },
-            body: JSON.stringify(data),
-        })
-            .then(res => res.json())
+        console.log(data)
+        axiosSecure.put(`http://localhost:5000/sendFeedback/${id}`, { feedback:data })
             .then(result => {
-                console.log(result)
-                if (data.modifiedCount) {
+                console.log(result.data)
+                if (result.data.modifiedCount) {
                     refetch();
                     Swal.fire({
                         position: 'top',
@@ -31,7 +29,7 @@ const ManageClasses = () => {
                         timer: 1500
                     })
                 }
-        })
+            })
     }
 
     const handleMakeFeedback = (e) => {
@@ -39,9 +37,10 @@ const ManageClasses = () => {
         const form = e.target;
         const feedback = form.feedback.value;
         handleClick(feedback)
+        form.reset();
     }
     return (
-        <div>
+        <Slide>
             <Helmet>
                 <title>Sports Today | Manage Classes</title>
             </Helmet>
@@ -70,11 +69,11 @@ const ManageClasses = () => {
                                 singleClass={singleClass}
                                 index={index}
                             ></ManageSingleCard>)
-                       }
+                        }
                     </tbody>
                 </table>
             </div>
-        </div>
+        </Slide>
     );
 };
 

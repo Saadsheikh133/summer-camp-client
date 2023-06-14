@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import useAxiosSecure from "../../../../Hooks/useAxiosSecure/useAxiosSecure";
 import { AuthContext } from "../../../../Providers/AuthProvider";
+import { Slide } from "react-awesome-reveal";
 
 
 const EnrolledClasses = () => {
@@ -18,7 +19,7 @@ const EnrolledClasses = () => {
     }, [axiosSecure, user])
 
     return (
-        <div>
+        <Slide>
             <Helmet>
                 <title>Sports Today | Enrolled Classes</title>
             </Helmet>
@@ -60,7 +61,7 @@ const EnrolledClasses = () => {
                     </tbody>
                 </table>
             </div>
-        </div>
+        </Slide>
     );
 };
 

@@ -7,7 +7,6 @@ import useUserRole from "../../Hooks/useUserRole/useUserRole";
 const AdminRoute = ({ children }) => {
     const location = useLocation();
     const [users, isLoading] = useUserRole();
-    console.log(users)
 
     if ( isLoading) {
         return <ColorRing

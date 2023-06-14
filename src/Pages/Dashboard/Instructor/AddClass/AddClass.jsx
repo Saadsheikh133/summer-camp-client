@@ -4,6 +4,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../../../Providers/AuthProvider";
 import Swal from "sweetalert2";
 import { Helmet } from "react-helmet-async";
+import { Slide } from "react-awesome-reveal";
 
 
 const image_hosting_token = import.meta.env.VITE_IMAGE_UPLOAD_TOKEN;
@@ -47,7 +48,7 @@ const AddClass = () => {
 
 
     return (
-        <div>
+        <Slide>
             <Helmet>
                 <title>Sports Today | Add A Class</title>
             </Helmet>
@@ -104,7 +105,7 @@ const AddClass = () => {
                     </form>
                 </div>
             </div>
-        </div>
+        </Slide>
     );
 };
 

@@ -18,6 +18,7 @@ import AdminRoute from "./AdminRoute/AdminRoute";
 import InstructorRoute from "./InstructorRoute/InstructorRoute";
 import PaymentHistory from "../Pages/Dashboard/Student/PaymentHistory/PaymentHistory";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
+import Feedback from "../Pages/Dashboard/Instructor/MyClasses/Feedback/Feedback";
 
 const router = createBrowserRouter([
     {
@@ -84,6 +85,10 @@ const router = createBrowserRouter([
                 element: <InstructorRoute>
                     <MyClasses></MyClasses>
                 </InstructorRoute>
+            },
+            {
+                path: 'feedback/:id',
+                element: <Feedback></Feedback>
             },
             // admin route
             {

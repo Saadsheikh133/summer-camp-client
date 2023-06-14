@@ -2,6 +2,7 @@ import Swal from "sweetalert2";
 import useAxiosSecure from "../../../../Hooks/useAxiosSecure/useAxiosSecure";
 import { useQuery } from "@tanstack/react-query";
 import { Helmet } from "react-helmet-async";
+import { Slide } from "react-awesome-reveal";
 
 
 const ManageUsers = () => {
@@ -47,7 +48,7 @@ const ManageUsers = () => {
     }
 
     return (
-        <div>
+        <Slide>
             <Helmet>
                 <title>Sports Today | Manage Users</title>
             </Helmet>
@@ -84,7 +85,7 @@ const ManageUsers = () => {
                     </tbody>
                 </table>
             </div>
-        </div>
+        </Slide>
     );
 };
 

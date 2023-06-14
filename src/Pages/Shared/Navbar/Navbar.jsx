@@ -50,7 +50,7 @@ const Navbar = () => {
             </li>
         }
         {
-            users.role !== "student" &&
+            users.role === "admin" || users.role === 'instructor' &&
             <li><Link to="/dashboard">Dashboard </Link></li>
         }
 
@@ -79,8 +79,6 @@ const Navbar = () => {
             </div>
             <div className="navbar-end">
                 <label className="swap swap-rotate mr-2">
-
-
                     {/* this hidden checkbox controls the state */}
                     <input onChange={handleToggle} checked={theme === 'light' ? false : true} type="checkbox" />
 

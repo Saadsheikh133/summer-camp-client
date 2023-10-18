@@ -10,6 +10,7 @@ const InstructorCard = ({ instructor }) => {
                 <div className="card-body text-center">
                     <h2 className="card-title justify-center">{instructor.name}</h2>
                     <p>{instructor.email}</p>
+                    <div className="divider"></div>
                     <div className="card-actions justify-center">
                         <Link to={'/classes'} className="btn btn-primary">See Classes</Link>
                     </div>

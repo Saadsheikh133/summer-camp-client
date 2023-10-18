@@ -5,6 +5,7 @@ import InstructorsInfo from "../InstructorsInfo/InstructorsInfo";
 import SportsInfo from "../SportsInfo/SportsInfo";
 import FavoriteSports from "../FavoriteSports/FavoriteSports";
 import Contact from "../Contact/Contact";
+import Subscribe from "../Subscribe/Subscribe";
 
 
 const Home = () => {
@@ -19,6 +20,7 @@ const Home = () => {
             <InstructorsInfo></InstructorsInfo>
             <Contact></Contact>
             <SportsInfo></SportsInfo>
+            <Subscribe></Subscribe>
         </div>
     );
 };

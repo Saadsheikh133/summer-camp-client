@@ -9,7 +9,7 @@ const BestClass = () => {
                     <h2 className="text-4xl font-bold">Do Not Miss!!</h2>
                 </div>
                 <div className='bg-gray-300 py-16 mt-10 rounded-xl lg:flex justify-evenly items-center gap-4 px-4 shadow-lg'>
-                    <img className='rounded-lg mx-3' src={recket} alt="" />
+                    <img className='rounded-lg lg:mx-3' src={recket} alt="" />
                     <div>
                         <h2 className='text-2xl lg:text-4xl my-3 font-bold text-center text-cyan-500'>BWF World Championships</h2>
                         <p className='text-2xl font-semibold mt-4'>

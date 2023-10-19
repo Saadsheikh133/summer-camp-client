@@ -1,4 +1,4 @@
-import { Pagination, Navigation, HashNavigation } from "swiper";
+import { Pagination, Navigation, HashNavigation } from 'swiper/modules';
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -14,7 +14,7 @@ import hockey from '../../../assets/images/hockey2.jpg';
 
 const Banner = () => {
     return (
-        <>
+        <div className='pt-24'>
             <Swiper
                 spaceBetween={30}
                 hashNavigation={{
@@ -84,7 +84,7 @@ const Banner = () => {
                     </div>
                 </SwiperSlide>
             </Swiper>
-        </>
+        </div>
     );
 };
 

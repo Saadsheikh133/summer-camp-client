@@ -4,10 +4,8 @@ import 'react-tabs/style/react-tabs.css';
 import SingleCategory from './SingleCategory';
 
 const TabCategory = () => {
-    const [category, setCategory] = useState('Basketball');
+    const [category, setCategory] = useState('Soccer');
     const [classes, setClasses] = useState([]);
-
-    console.log(classes)
 
     useEffect(() => {
         fetch(`http://localhost:5000/category?category=${category}`)

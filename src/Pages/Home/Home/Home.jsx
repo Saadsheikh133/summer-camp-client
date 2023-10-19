@@ -6,6 +6,8 @@ import SportsInfo from "../SportsInfo/SportsInfo";
 import FavoriteSports from "../FavoriteSports/FavoriteSports";
 import Contact from "../Contact/Contact";
 import Subscribe from "../Subscribe/Subscribe";
+import CustomerReview from "../CustomerReview/CustomerReview";
+import BestClass from "../BestClass/BestClass";
 
 
 const Home = () => {
@@ -18,6 +20,8 @@ const Home = () => {
             <FavoriteSports></FavoriteSports>
             <Classes></Classes>
             <InstructorsInfo></InstructorsInfo>
+            <BestClass></BestClass>
+            <CustomerReview></CustomerReview>
             <Contact></Contact>
             <SportsInfo></SportsInfo>
             <Subscribe></Subscribe>

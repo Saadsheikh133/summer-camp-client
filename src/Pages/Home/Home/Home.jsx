@@ -8,6 +8,7 @@ import Contact from "../Contact/Contact";
 import Subscribe from "../Subscribe/Subscribe";
 import CustomerReview from "../CustomerReview/CustomerReview";
 import BestClass from "../BestClass/BestClass";
+import TabCategory from "../TabCategory/TabCategory";
 
 
 const Home = () => {
@@ -19,6 +20,7 @@ const Home = () => {
             <Banner></Banner>
             <FavoriteSports></FavoriteSports>
             <Classes></Classes>
+            <TabCategory></TabCategory>
             <InstructorsInfo></InstructorsInfo>
             <BestClass></BestClass>
             <CustomerReview></CustomerReview>

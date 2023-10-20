@@ -8,7 +8,7 @@ const TabCategory = () => {
     const [classes, setClasses] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/category?category=${category}`)
+        fetch(`https://b7a12-summer-camp-server.vercel.app/category?category=${category}`)
             .then(res => res.json())
         .then(data => setClasses(data))
     }, [category])

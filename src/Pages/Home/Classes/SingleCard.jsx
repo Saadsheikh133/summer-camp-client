@@ -1,4 +1,5 @@
 import { Slide } from "react-awesome-reveal";
+import { Link } from "react-router-dom";
 
 const SingleCard = ({ singleClass }) => {
     return (
@@ -16,7 +17,9 @@ const SingleCard = ({ singleClass }) => {
                         <p>Category: {singleClass.category}</p>
                         <p>Price: ${singleClass.price}</p>
                         <div className="card-actions justify-end">
-                            <button className="btn btn-primary">Select</button>
+                            <Link to={'/classes'}>
+                                <button className="btn btn-primary">Select</button>
+                            </Link>
                         </div>
                     </div>
             </div>
